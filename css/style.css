@@ -1,0 +1,346 @@
+a {
+    text-decoration: none;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    color: var(--cor-principal);
+}
+
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    background-color: var(--cor-principal);
+    height: 4rem;
+}
+
+.container {
+
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    height: 100%;
+    padding: 5px;
+}
+
+.container .logo img {
+    padding-top: 10px;
+    width: 50%;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.area_cliente {
+    margin-left: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid white;
+    background-color: white;
+    color: #383333;
+    cursor: pointer;
+}
+
+
+nav {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.grid {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+    justify-content: center;
+}
+
+.grid a {
+    color: white;
+    align-self: center;
+}
+
+.grid li {
+    margin-right: 1rem;
+}
+
+.grid a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    transition: width 0.4s;
+    background-color: var(--cor-sublinhado);
+}
+
+.grid a:hover::after {
+    width: 100%;
+}
+
+.container_home {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 100px;
+}
+
+.section img {
+    border-radius: 10px;
+}
+
+.section .texto h3 {
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+.section .texto h1 {
+    font-size: 4rem;
+}
+
+.section .texto p {
+    font-size: 1.05rem;
+}
+
+.areaCliente {
+    margin-left: 12rem;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1px;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 0.5rem;
+
+    cursor: pointer;
+}
+
+.areaCliente:hover {
+    background-color: var(--cor-mudada);
+    transition: 0.3s all;
+    transform: scale(1.1);
+}
+
+.home .container_home .article_home h3 {
+    color: #2967A2;
+    font-family: "Kanit", Sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.home .container_home .article_home h2 {
+    color: #333333;
+    font-family: "Kanit", Sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.home .container_home .article_home {
+    transition: 0.3s all;
+}
+
+.home .container_home .article_home:hover {
+    transform: scale(1.1);
+}
+
+p {
+    color: #666666;
+    font-family: "Poppins", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.home .container_home .imagem_home img {
+    border-radius: 20px;
+    vertical-align: middle;
+    display: inline-block;
+
+    height: auto;
+    max-width: 100%;
+    border: none;
+    box-shadow: none;
+    transition: 0.3s all;
+}
+
+.home .container_home .imagem_home img:hover {
+    transform: scale(1.05);
+}
+
+.saibaMais {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    border-radius: 10px;
+    color: black;
+}
+
+.saibaMais:hover {
+    background-color: var(--cor-mudada);
+    transition: 0.3s all;
+    color: white;
+}
+
+.informativo {
+    background-color: var(--cor-principal);
+    /* Cor de fundo da div informativo */
+    padding: 20px;
+    /* Adicione espaço interno à div informativo conforme necessário */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: white;
+    font-size: 5rem;
+
+}
+
+.informativo p {
+    color: white;
+    font-size: 1rem;
+}
+
+.anosMercado,
+.empresasAtendidas,
+.taxaSucesso {
+    flex: 1;
+    /* Cada bloco de informação ocupa a largura igual */
+    text-align: center;
+}
+
+.anosMercado,
+.empresasAtendidas,
+.taxaSucesso {
+    transition: 0.3s all;
+}
+
+.anosMercado:hover,
+.empresasAtendidas:hover,
+.taxaSucesso:hover {
+    transform: scale(1.2);
+    cursor: default;
+}
+
+.divisor {
+    width: 100%;
+    border: 0.5px solid #ccc;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.services .title {
+    color: #333333;
+    font-family: "Kanit", Sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.services {
+    width: 100%;
+    max-width:1280px;
+    /* ou qualquer valor desejado */
+    margin: 0 auto;
+    /* para centralizar o conteúdo */
+    text-align: center;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas na primeira linha */
+    gap: 10px;
+    /* Espaço entre os cards */
+    max-width: 800px;
+    /* ou qualquer valor desejado */
+    margin: 0 auto;
+    /* para centralizar o conteúdo */
+    box-sizing: border-box;
+    /* incluir a largura da borda e do preenchimento no cálculo da largura total */
+}
+
+.parent {
+    width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div3 {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.div4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.div5 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.cards img{
+    margin-bottom: 2rem;
+}
+
+.cards h3{
+    margin-bottom: 1rem;
+}
+
+.cards p {
+    text-align: center;
+}
+
+.cards {
+    border: none solid #ccc;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.4s all;
+    cursor: pointer;
+}
+
+.cards:hover{
+    transform: scale(1.1);
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+}

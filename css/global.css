@@ -1,0 +1,20 @@
+@import url('./style.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Retirando todo o estilo que já existe na página HTML */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-principal: #2967a2;
+    --cor-mudada: #69aceb;
+    --cor-sublinhado: white;
+    --header-height: 4.5rem;
+}

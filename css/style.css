@@ -20,24 +20,23 @@ span {
     text-align: center;
     border-bottom: 1px solid #ccc;
     background-color: var(--cor-principal);
-    height: 4rem;
+    /* height: 4rem;  */
 }
 
 .container {
-
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
     padding: 5px;
 }
 
 .container .logo img {
     padding-top: 10px;
     width: 50%;
-    height: auto;
+    /* height: auto; */
 }
 
 .menu {
@@ -291,10 +290,6 @@ p {
 .parent {
     width: 1280px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
 }
 
 .div1 {

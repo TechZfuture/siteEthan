@@ -17,4 +17,5 @@ body{
     --cor-mudada: #69aceb;
     --cor-sublinhado: white;
     --header-height: 4.5rem;
+    --box-shadow: rgba(41,103,162, 0.15);
 }

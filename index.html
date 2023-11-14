@@ -7,12 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ethan Group | Soluções Empresariais</title>
     <link rel="stylesheet" href="css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
 </head>
 
 <body>
 
     <header id="header">
-        <nav class="container">
+        <nav class="container_nav">
             <a class="logo" href="#">
                 <img src="assets/img/ethan_branco-removebg-preview.png" alt="">
                 </span>.</a>
@@ -26,6 +31,9 @@
                 </ul>
                 <a class="areaCliente" href="">Área do Cliente</a>
             </div>
+
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-close"></div>
         </nav>
     </header>
 
@@ -43,6 +51,7 @@
         </div>
     </section>
 
+    <section>
     <div class="informativo">
         <div class="anosMercado">+10
             <p>
@@ -56,6 +65,7 @@
             <p>Taxa de Sucesso</p>
         </div>
     </div>
+  </section>
 
     <div class="divisor"></div>
 
@@ -124,8 +134,102 @@
         </div>
     </section>
 
-    <!-- <div class="divisor"></div> -->
+    <div class="divisor"></div>
 
+    <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">Depoimentos de quem já passou por aqui !</h2>
+          </header>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo; </span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Mollitia rem nihil perspiciatis eius quos totam veritatis
+                    temporibus eveniet molestiae amet ad laudantium aliquid
+                    voluptatem esse a, magnam odit modi cupiditate!
+                  </p>
+                  <cite>
+                    <img
+                      src="./assets/img/24.jpg"
+                      alt="Foto de Wanessa Souza"
+                    />
+                    Wanessa Souza - Presidente do Banco do Brasil
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo; </span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Mollitia rem nihil perspiciatis eius quos totam veritatis
+                    temporibus eveniet molestiae amet ad laudantium aliquid
+                    voluptatem esse a, magnam odit modi cupiditate!
+                  </p>
+                  <cite>
+                    <img src="./assets/img/91.jpg" alt="" />
+                    Frank Souza - Presidente do Itaú
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo; </span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Mollitia rem nihil perspiciatis eius quos totam veritatis
+                    temporibus eveniet molestiae amet ad laudantium aliquid
+                    voluptatem esse a, magnam odit modi cupiditate!
+                  </p>
+                  <cite>
+                    <img src="./assets/img/93.jpg" alt="" />
+                    <p class="author">Val Souza - Presidente do Bradesco</p>
+                  </cite>
+                </blockquote>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divisor"></div>
+
+      <section class="contato home">
+        <div class="container_home">
+            <article class="article_home">
+                <h3>ENTRE EM CONTATO !</h3>
+                <h2>VENHA FAZER PARTE DESSA FAMÍLIA !</h2>
+                <p>A tranquilidade que o empresário precisa para focar e expandir o seu core business.</p>
+                <a class="saibaMais" href="#services">Entrar em contato !</a>
+            </article>
+            <div class="imagem_home">
+                <img src="assets/img/mulherInicial.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+            <a class="logo" href="#">
+                <img src="assets/img/ethan_branco-removebg-preview.png" alt="">
+                </span>.</a>          
+
+        <div class="direitos">
+            Copyright © 2023 Ethan Soluções Empresariais - Todos os direitos reservados.
+        </div>
+      </footer>
+
+      <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/script.js"></script>
 </body>
 

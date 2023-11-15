@@ -1,105 +1,74 @@
-const nav = document.querySelector("#header nav");
-const toggle = document.querySelectorAll("nav .toggle");
-
-for (const element of toggle) {
-  element.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
-}
-
-const links = document.querySelectorAll("nav ul li a");
-
-for (const link of links) {
-  link.addEventListener("click", () => {
-    nav.classList.remove("show");
-  });
-}
-
-// MUDAR O HEADER DA PÁGINA QUANDO DER O SCROLL
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
-function changeHeaderWhenScroll() {
-  if (window.scrollY >= navHeight) {
-    header.classList.add('scroll')
-  } else {
-    header.classList.remove('scroll')
-  }
-}
-
 const swiper = new Swiper(".swiper-container", {
-  slidesPerView: 2, // Número de slides visíveis ao mesmo tempo
-  pagination: {
-    el: ".swiper-pagination",
+  slidesPerView: 1, // Número de slides visíveis ao mesmo tempo
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 1000,
+  scrollbar: {
+    el: ".swiper-slide",
   },
   mousewheel: true,
   keyboard: true,
-  breakpoints: {
-    767: {
-      slidesPerView: 2,
-      setWrapperSize: true,
-    },
-  },
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: false,
+  }
 });
 
-const scrollReveal = ScrollReveal({
-  origin: "top",
-  distance: "30px",
-  duration: 700,
-  reset: true,
+const toggle = document.querySelector(".toggle");
+const nav = document.querySelector(".nav")
+
+toggle.addEventListener("click", () => nav.classList.toggle("show"));
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Função para animar os números
+  function animateCounters() {
+    var counters = document.querySelectorAll(".count");
+
+    counters.forEach(function (counter) {
+      var target = parseInt(counter.getAttribute("data-target"));
+      var step = Math.ceil(target / 100); // Ajuste o número de etapas conforme necessário
+
+      function updateCounter() {
+        var currentValue = parseInt(counter.textContent);
+        if (currentValue < target) {
+          counter.textContent = currentValue + step;
+          setTimeout(updateCounter, 25); // Ajuste o intervalo conforme necessário
+        } else {
+          counter.classList.remove("counting");
+        }
+      }
+
+      updateCounter();
+    });
+  }
+
+  // Verifica se os elementos estão visíveis na tela
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Adiciona a classe "counting" quando os elementos estão visíveis
+  function handleScroll() {
+    var counters = document.querySelectorAll(".count");
+
+    counters.forEach(function (counter) {
+      if (isElementInViewport(counter) && !counter.classList.contains("counting")) {
+        counter.classList.add("counting");
+      }
+    });
+  }
+
+  // Adiciona um ouvinte de evento de rolagem para verificar a animação dos números
+  window.addEventListener("scroll", handleScroll);
+
+  // Inicia a animação dos números quando a página é carregada
+  animateCounters();
 });
-
-scrollReveal.reveal(
-  `.home .article_home, .home .imagem_home,
-     .informativo .anosMercado, .informativo .empresasAtendidas, .informativo .taxaSucesso,
-     .services header, .services .parent,
-     #testimonials header, #testimonials .testimonials,
-     .contato .article_home, .contato .imagem_home,
-     .footer .logo, footer .direitos
-    `,
-  { interval: 100 }
-);
-
-// BOTÃO VOLTAR PARA O TOPO
-const backToTopButton = document.querySelector('.back-to-top')
-
-function backToTop() {
-  if (window.scrollY >= 560) {
-    backToTopButton.classList.add('show')
-  } else {
-    backToTopButton.classList.remove('show')
-  }
-}
-
-// Menu ativo conforme a seção visivel na página
-const sections = document.querySelectorAll('main section[id]')
-
-function activateMenuAtCurrentSection() {
-  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
-
-  for (const section of sections) {
-    const sectionTop = section.offsetTop
-    const sectionHeight = section.offsetHeight
-    const sectionId = section.getAttribute('id')
-
-    const checkpointStart = checkpoint >= sectionTop
-    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
-
-    if (checkpointStart && checkpointEnd) {
-      document
-        .querySelector('nav ul li a[href*=' + sectionId + ']')
-        .classList.add('active')
-    } else {
-      document
-        .querySelector('nav ul li a[href*=' + sectionId + ']')
-        .classList.remove('active')
-    }
-  }
-}
-
-// WHEN SCROLL
-window.addEventListener('scroll', () => {
-  changeHeaderWhenScroll()
-  backToTop()
-  activateMenuAtCurrentSection()
-})

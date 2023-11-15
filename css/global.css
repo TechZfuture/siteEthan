@@ -37,5 +37,8 @@ span {
   /* VARIAVEIS HOME */
   --cor-paragrafo: #777777;
 
+  /* COR DO TITULO DOS SERVICOS */
+  --cor-titulo-servico: #333333;
+
   --box-shadow: rgba(41, 103, 162, 0.15);
 }

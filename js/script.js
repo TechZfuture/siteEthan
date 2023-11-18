@@ -72,3 +72,31 @@ document.addEventListener("DOMContentLoaded", function () {
   // Inicia a animação dos números quando a página é carregada
   animateCounters();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var fraseIndex = 0;
+  var frases = ["BPO T.I", "BPO FINANCEIRO", "ASSESSORIA EMPRESARIAL", "CONTROLADORIA E GESTÃO", "BPO CONTÁBIL"];
+  var pTag = document.getElementById("fraseContainer");
+
+  function changeFrase() {
+      pTag.textContent = frases[fraseIndex];
+      pTag.classList.remove("slideOut");
+      pTag.classList.add("slideIn");
+
+      setTimeout(function () {
+          pTag.classList.remove("slideIn");
+          pTag.classList.add("slideOut");
+      }, 7000); // Duração da transição de saída
+
+      setTimeout(function () {
+          pTag.textContent = ""; // Limpa a frase após a transição de saída
+      }, 8000); // Tempo total antes de iniciar a próxima transição
+
+      fraseIndex = (fraseIndex + 1) % frases.length;
+  }
+
+  // Inicia com a primeira frase
+  changeFrase();
+
+  setInterval(changeFrase, 9000); // Muda a cada 9 segundos
+});
